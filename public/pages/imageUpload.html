@@ -1,0 +1,22 @@
+<div class="row" ng-controller="foodAdderController">
+		<h3 class="text-center">Preview an image before it is uploaded</h3>
+		<hr />
+		
+		<div class="col-md-4 col-md-offset-4">
+		    <div class="form-group">
+              <div class="main-img-preview">
+                <img class="thumbnail img-preview" src="http://farm4.static.flickr.com/3316/3546531954_eef60a3d37.jpg" title="Preview Logo">
+              </div>
+              <div class="input-group">
+                <input id="fakeUploadLogo" class="form-control fake-shadow" placeholder="Choose File" disabled="disabled">
+                <div class="input-group-btn">
+                  <div class="fileUpload btn btn-danger fake-shadow">
+                    <span><i class="glyphicon glyphicon-upload"></i> Upload Logo</span>
+                    <input id="logo-id" name="logo" type="file" class="attachment_upload">
+                  </div>
+                </div>
+              </div>
+              <p class="help-block">* Upload your company logo.</p>
+            </div>
+		</div>
+	</div>
