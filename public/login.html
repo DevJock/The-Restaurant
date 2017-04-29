@@ -2,7 +2,7 @@
 <html ng-app="application">
 
 <head>
-    <base href="/">
+    <base href="/"/>
     <title>Log In</title>
     <script src="javascripts/jquery.js"></script>
     <script src="javascripts/angular.js"></script>
@@ -16,7 +16,7 @@
     <script src="javascripts/bootstrap.js"></script>
 </head>
 
-<body id="body" class="container-fluid">
+<body class="container-fluid">
      <nav class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation" ng-controller="navBarController">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -36,6 +36,9 @@
 
                     
     <div ui-view="jumboText" class="container-fluid">
+    </div>
+
+    <div id="body" class="textBanner container-fluid">
     </div>
     <main ui-view="main" id="formHolder" class="container-fluid">
     </main>

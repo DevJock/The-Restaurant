@@ -25,16 +25,7 @@ var orderTemplate = {
 }
 
 /* GET menu listing. */
-router.get('/', function(req, res, next) 
-{
-  res.setHeader("content-type", "application/json");
-  order_module.setSessionUser(user);
-  var obj = order_module.getAllOrdersForUser();
-  res.end(JSON.stringify(obj));
-  
-});
-
-
+/*
 router.get('/createdummy', function(req, res, next) 
 {
   res.setHeader("content-type", "application/json");
@@ -45,7 +36,7 @@ router.get('/createdummy', function(req, res, next)
   res.end(JSON.stringify(obj));
   
 });
-
+*/
 
 router.post('/neworder', function(req, res, next) 
 {

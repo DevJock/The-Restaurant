@@ -6,6 +6,11 @@ body{
     -moz-osx-font-smoothing: grayscale;
 }
 
+.textBanner{
+  text-align: center;
+  color: lightsalmon;
+}
+
 .loginForm{
     position: relative;
     z-index: 1;

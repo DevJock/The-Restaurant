@@ -44,12 +44,12 @@ angular
                 if (data.data.uname == "i.am.admin") {
                         setTimeout(function () {
                             window.location = 'admin.html'
-                        }, 1000);
+                        }, 3000);
 
                     } else {
                         setTimeout(function () {
                             window.location = 'index.html'
-                        }, 1000);
+                        }, 3000);
                     }
             } else if (data.data.code == "100") {
 
@@ -71,12 +71,12 @@ angular
                     if (data.data.uname == "i.am.admin") {
                         setTimeout(function () {
                             window.location = 'admin.html'
-                        }, 1000);
+                        }, 3000);
 
                     } else {
                         setTimeout(function () {
                             window.location = 'index.html'
-                        }, 1000);
+                        }, 3000);
                     }
                 } else {
                     textNode.nodeValue = data.data.description;
@@ -103,7 +103,7 @@ angular
                     body.appendChild(bigText);
                     setTimeout(function () {
                         window.location = 'index.html'
-                    }, 1000);
+                    }, 3000);
                 } else {
                     textNode.nodeValue = data.data.description;
                     document.getElementById("registerButton").disabled = false;
@@ -113,7 +113,8 @@ angular
     })
     .controller("navBarController", function ($scope, $http) {
         $http.get('/login/').then(function callBack(response) {
-            if (response.data.uname) {
+            if (response.data.uname) 
+            {
                 $scope.currentUser = response.data.uname;
             }
             if ($scope.currentUser == "null") {

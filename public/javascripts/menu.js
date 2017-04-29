@@ -29,14 +29,14 @@ angular
             if (quantity > 10) {
                 quantity = 10;
             }
-            var num = +subString(item.cost, 1, item.cost.length);
-            var totPrice = (+num * quantity);
+            var totPrice = (+subString(item.cost, 1, item.cost.length) * quantity);
             $scope.totalPrice += totPrice;
             var newItem = {
                 name: item.name,
                 quant: quantity,
-                price: item.cost,
-                totalPrice: totPrice
+                price:item.cost,
+                totalPrice:totPrice,
+                category: 0
             };
             if (theItem) {
                 $scope.items[pos] = newItem;
@@ -79,13 +79,14 @@ angular
             if (quantity > 10) {
                 quantity = 10;
             }
-            var num = +subString(item.cost, 1, item.cost.length);
-            var totPrice = +num * quantity;
+            var totPrice = (+subString(item.cost, 1, item.cost.length) * quantity);
+            $scope.totalPrice += totPrice;
             var newItem = {
                 name: item.name,
                 quant: quantity,
-                price: item.cost,
-                totalPrice: totPrice
+                price:item.price,
+                totPrice:totPrice,
+                category: 1
             };
             if (theItem) {
                 $scope.items[pos] = newItem;
@@ -128,13 +129,14 @@ angular
             if (quantity > 10) {
                 quantity = 10;
             }
-            var num = +subString(item.cost, 1, item.cost.length);
-            var totPrice = +num * quantity;
+             var totPrice = (+subString(item.cost, 1, item.cost.length) * quantity);
+            $scope.totalPrice += totPrice;
             var newItem = {
                 name: item.name,
                 quant: quantity,
-                price: item.cost,
-                totalPrice: totPrice
+                price:item.price,
+                totPrice:totPrice,
+                category: 2
             };
             if (theItem) {
                 $scope.items[pos] = newItem;
@@ -177,13 +179,14 @@ angular
             if (quantity > 10) {
                 quantity = 10;
             }
-            var num = +subString(item.cost, 1, item.cost.length);
-            var totPrice = +num * quantity;
+             var totPrice = (+subString(item.cost, 1, item.cost.length) * quantity);
+            $scope.totalPrice += totPrice;
             var newItem = {
                 name: item.name,
                 quant: quantity,
-                price: item.cost,
-                totalPrice: totPrice
+                price:item.price,
+                totPrice:totPrice,
+                category: 3
             };
             if (theItem) {
                 $scope.items[pos] = newItem;
@@ -210,8 +213,8 @@ angular
             for (var i = 0; i < $scope.items.length; i++) {
                 var obj = {
                     itemName: $scope.items[i].name,
-                    itemCost: $scope.items[i].price,
-                    itemQuantity: $scope.items[i].quant
+                    itemQuantity: $scope.items[i].quant,
+                    itemCategory: $scope.items[i].category
                 };
                 data.orderItems.push(obj);
             }
